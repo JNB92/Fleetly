@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+    <ImageView
+        android:id="@+id/vehicleImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/round_directions_bus_24" />
+    <TextView
+        android:id="@+id/vehicleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="VehicleName" />
+    <TextView
+        android:id="@+id/vehicleType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="vehicleType" />
+    <TextView
+        android:id="@+id/vehicleNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="vehicleNumber" />
+    <TextView
+        android:id="@+id/vehicleSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="vehicleSource" />
+    <TextView
+        android:id="@+id/vehicleDestination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="vehicleDestination" />
+    <TextView
+        android:id="@+id/vehicleCurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="vehicleCurrentLocation" />
+    <TextView
+        android:id="@+id/vehicleGoodsTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="vehicleGoodsTemperature" />
+    <TextView
+        android:id="@+id/vehicleFuelStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="vehicleFuelStatus" />
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Back" />
+</LinearLayout>
