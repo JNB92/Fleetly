@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class VehicleDetailsActivity extends AppCompatActivity {
 
     private ImageView vehicleImage;
-    private TextView vehicleName, vehicleType, vehicleNumber, vehicleSource, vehicleDestination,
+    private TextView vehicleDriver, vehicleName, vehicleType, vehicleNumber, vehicleRegistration, vehicleSource, vehicleDestination,
             vehicleCurrentLocation, vehicleStockTemperature, vehicleFuelLevel;
 
     @Override
@@ -21,11 +22,12 @@ public class VehicleDetailsActivity extends AppCompatActivity {
         setViewIds();
         Intent intent = getIntent();
         Vehicle vehicle = (Vehicle) intent.getSerializableExtra("vehicle");
-        // Assuming you have a method to set the image
         setVehicleImage(vehicleImage, vehicle);
+        vehicleDriver.setText(vehicle.getDriver());
         vehicleName.setText(vehicle.getName());
         vehicleType.setText(vehicle.getType());
         vehicleNumber.setText(vehicle.getNumber());
+        vehicleRegistration.setText(vehicle.getRegistration());
         vehicleSource.setText(vehicle.getSource());
         vehicleDestination.setText(vehicle.getDestination());
         vehicleCurrentLocation.setText(vehicle.getCurrentLocation());
@@ -35,9 +37,11 @@ public class VehicleDetailsActivity extends AppCompatActivity {
 
     private void setViewIds() {
         vehicleImage = findViewById(R.id.vehicleImage);
+        vehicleDriver = findViewById(R.id.vehicleDriver);
         vehicleName = findViewById(R.id.vehicleName);
         vehicleType = findViewById(R.id.vehicleType);
         vehicleNumber = findViewById(R.id.vehicleNumber);
+        vehicleRegistration = findViewById(R.id.vehicleRegistration);
         vehicleSource = findViewById(R.id.vehicleSource);
         vehicleDestination = findViewById(R.id.vehicleDestination);
         vehicleCurrentLocation = findViewById(R.id.vehicleCurrentLocation);
@@ -46,6 +50,5 @@ public class VehicleDetailsActivity extends AppCompatActivity {
     }
 
     private void setVehicleImage(ImageView imageView, Vehicle vehicle) {
-        // Code to set the image, depending on how you handle images
     }
 }

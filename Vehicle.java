@@ -2,21 +2,25 @@ package com.example.fleetmanagement;
 
 import java.io.Serializable;
 
-public class Vehicle implements Serializable { // Implement Serializable here
+public class Vehicle implements Serializable {
+    private String driver;
     private String name;
     private String type;
     private String number;
+    private String registration;
     private String source;
     private String destination;
     private String currentLocation;
     private String goodsTemperature;
     private String fuelStatus;
 
-    public Vehicle(String name, String type, String number, String source, String destination, String currentLocation,
+    public Vehicle(String driver, String name, String type, String number,String registration, String source, String destination, String currentLocation,
                    String goodsTemperature, String fuelStatus) {
+        this.driver = driver;
         this.name = name;
         this.type = type;
         this.number = number;
+        this.registration = registration;
         this.source = source;
         this.destination = destination;
         this.currentLocation = currentLocation;
@@ -25,9 +29,17 @@ public class Vehicle implements Serializable { // Implement Serializable here
 
 
     }
+    public String getDriver() {
+        return driver;
+    }
+    public void setDriver(String driver) {
+        this.driver = driver;
+    }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -39,6 +51,12 @@ public class Vehicle implements Serializable { // Implement Serializable here
     }
     public String getNumber(){return number;}
     public void setNumber(String number){this.number = number;}
+    public String getRegistration() {
+        return registration;
+    }
+    public void setRegistration(String registration) {
+        this.registration = name;
+    }
     public String getSource(){return source;}
     public void setSource(String source){this.source = source;}
     public String getDestination(){return destination;}
